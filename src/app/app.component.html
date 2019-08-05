@@ -1,0 +1,38 @@
+<h1>Users</h1>
+<div class="grid" #mygrid>
+  <!-- this becomes draggable! -->
+  <div class="item">
+    <div class="item-content">
+      <div class="item-content-inner">
+        Hard-coded user one
+      </div>
+    </div>
+  </div>
+
+  <!-- this becomes draggable! -->
+  <div class="item">
+    <div class="item-content">
+      <div class="item-content-inner">
+        Hard-coded user two
+      </div>
+    </div>
+  </div>
+
+  <!-- the five generated items here do NOT become draggable -->
+  <ng-container  *ngFor="let user of users">
+  <div class="item" #item>
+    <div class="item-content">
+      <div class="item-content-inner">
+        {{user.name.first}} {{user.name.last}}
+      </div>
+    </div>
+  </div>
+  </ng-container>
+</div>
+
+<!-- <hr/>
+
+<h3>Users retrieved from API:</h3>
+<div *ngFor="let user of users">
+   <input type="text" value="{{user.name.first}} {{user.name.last}}">
+</div> -->
